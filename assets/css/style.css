@@ -1,0 +1,519 @@
+/* GENERALE */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --purple-1: #DBD1FC;
+    --purple-2: #7551DC;
+    --yellow-1:#F9EEE2;
+    --yellow-2:#FFCC6A;
+    --white: #ffffff;
+    --black: #121212;
+    --font: "DM Sans";
+
+    --space-100: 8px;
+    --space-200: 16px;
+    --space-300: 24px;
+    --space-400: 32px;
+    --space-500: 40px;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #F6F5F6;
+}
+
+p {
+    text-wrap: wrap;
+}
+
+.btn {
+    border-radius: 40px;
+    padding: 17px 26px;
+    border: none;
+    width: 190px;
+    height: 60px;
+}
+
+.overflow-hidden {
+    overflow:hidden;
+}
+
+.text-center { 
+    text-align:center;
+}
+.m-auto {
+    margin: 0 auto;
+}
+.fw-semibold {
+    font-weight: 500;
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+.bg-yellow {
+    background-color: var(--yellow-1)!important;
+}
+
+.bg-yellow-2  { 
+    background-color: var(--yellow-2)!important;
+}
+.bg-purple {
+    background-color: var(--purple-2);
+}
+.bg-purple-1 {
+    background-color: vaR(--purple-1);
+}
+.text-purple {
+    color: var(--purple-2);
+}
+.text-yellow {
+    color: var(--yellow-2);
+}
+.text-white {
+    color: var(--white);
+}
+.text-1 {
+    font-family: var(--font);
+    font-size: 62px;
+    line-height: 58px;
+    letter-spacing: -3px;
+    margin: 0;
+}
+@media screen and (max-width: 769px) {
+   .text-1 {
+        font-size: 54px;
+        line-height: 48px; 
+   }
+
+}
+@media screen and (max-width: 378px) {
+    .text-1 {
+        font-size: 46px;
+        line-height: 42px;
+
+    }
+
+}
+
+.text-2 {
+    font-family: var(--font);
+    font-size: 40px;
+    line-height: 36px;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .text-2 {
+         font-size: 36px;
+         line-height: 30px; 
+    }
+ 
+ }
+ @media screen and (max-width: 378px) {
+     .text-2 {
+         font-size: 32px;
+         line-height: 28px;
+ 
+     }
+ 
+ }
+.text-3 {
+    font-family: var(--font);
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .text-3 {
+         font-size: 28px;
+         line-height: 26px; 
+    }
+ 
+ }
+ @media screen and (max-width: 378px) {
+     .text-3 {
+         font-size: 26px;
+         line-height: 24px;
+ 
+     }
+ 
+ }
+.text-4 {
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 0px;
+    margin: 0;
+}
+
+
+.container {
+
+    display:grid;
+
+
+    grid-template:
+    "card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-2 card-2 card-3 card-3 card-3"
+    "card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-2 card-2 card-3 card-3 card-3"
+    "card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-2 card-2 card-3 card-3 card-3"
+    "card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-2 card-2 card-3 card-3 card-3"
+    "card-1 card-1 card-1 card-4 card-4 card-4 card-5 card-5 card-5 card-3 card-3 card-3"
+    "card-6 card-6 card-6 card-4 card-4 card-4 card-5 card-5 card-5 card-3 card-3 card-3"
+    "card-6 card-6 card-6 card-4 card-4 card-4 card-5 card-5 card-5 card-3 card-3 card-3"
+    "card-6 card-6 card-6 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
+    "card-6 card-6 card-6 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8"
+    "card-6 card-6 card-6 card-7 card-7 card-7 card-8 card-8 card-8 card-8 card-8 card-8";
+    gap: 32px;
+    min-height: 100vh;
+    width: calc(1440px - 2*(160px));
+    height: calc(415px + 434px);
+    margin: 83px 160px!important;
+}
+
+@media screen and (max-width: 769px ) {
+    body {
+        height: auto;
+    }
+    .container {
+        display:grid;
+        grid-template:
+        "card-2 card-2"
+        "card-2 card-2"
+        "card-2 card-2"
+        "card-4 card-5"
+        "card-4 card-5"
+        "card-3 card-3"
+        "card-3 card-3"
+        "card-3 card-3"
+        "card-3 card-3"
+        "card-8 card-8"
+        "card-8 card-8"
+        "card-7 card-7"
+        "card-1 card-6"
+        "card-1 card-6"
+        "card-1 card-6";
+        width: calc(769px - 2 * (40px) );
+        height: 1959.31px;
+        gap:32px;
+        margin: 52px 40px!important;
+    }
+}
+
+
+@media screen and (max-width: 376px) {
+     .container {
+        width: calc(375px - 2 * (40px) );
+        margin: 32px 16px!important;
+            display:grid;
+            grid-template:
+            "card-2 card-2"
+            "card-2 card-2"
+            "card-4 card-4"
+            "card-5 card-5"
+            "card-3 card-3"
+            "card-3 card-3"
+            "card-3 card-3"
+            "card-8 card-8"
+            "card-8 card-8"
+            "card-7 card-7"
+            "card-7 card-7"
+            "card-1 card-1"
+            "card-1 card-1"
+            "card-6 card-6"
+            "card-6 card-6"
+            "card-6 card-6"
+            ;
+            height:2534.35px;
+            gap:32px;
+            margin: 32px 16px!important;
+        }
+}
+
+.card {
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.card:nth-child(1) {
+    grid-area: card-1;
+    width: 256px;
+    height: 415px;
+    gap: 24px;
+}
+
+@media screen and (max-width: 769px) {
+    .card:nth-child(1) {
+        grid-area: card-1;
+        width: 328px;
+        height: 354px;
+        padding: 24px;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(1) {
+        grid-area: card-1;
+        width: 343px;
+        height: 234px;
+
+    }
+}
+
+.card:nth-child(2) {
+    grid-area: card-2;
+    width: 544px;
+    height: 324px;
+    gap: 24px;
+}
+@media screen and (max-width: 769px) {
+    .card:nth-child(2) {
+        grid-area: card-2;
+        width: 688px;
+        height: 324px;
+
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(2) {
+        grid-area: card-2;
+        width: 343px;
+        height: 290px;
+        align-items: unset;
+        padding: 40px 32px;
+
+        & p {
+            width: 279px;
+            font-weight: 400;
+        }
+    }
+}
+
+.card:nth-child(3) {
+    grid-area: card-3;
+    width: 256px;
+    height: 603px;
+    gap: 24px;
+}
+
+@media screen and (max-width: 769px) {
+    .card:nth-child(3) {
+        grid-area: card-3;
+        width: 688px;
+        height: 496px;
+        align-items:center;
+        justify-content: center;
+        text-align:center;
+        & div {
+            width: 359px;
+        }
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(3) {
+        grid-area: card-3;
+        width: 343px;
+        height: 468px;
+
+        & img {
+            width: 308px;
+        }
+
+        & div {
+            width: 279px;
+        }
+    }
+}
+.card:nth-child(4) {
+    grid-area: card-4;
+    width: 256px;
+    height: 247px;
+    padding: 24px;
+    gap:24px;
+
+    & p {
+        width: 208px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .card:nth-child(4) {
+        grid-area: card-4;
+        width: 328px;
+        height: 247px;
+        & p {
+            width: 100%!important;
+        }
+
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(4) {
+        grid-area: card-4;
+        width: 343px;
+        height: 162.54px;
+    }
+}
+
+.card:nth-child(5) {
+    grid-area: card-5;
+    width: 256px;
+    height: 247px;
+    gap: 24px;
+    padding: 24px;
+}
+
+@media screen and (max-width: 769px) {
+    .card:nth-child(5) {
+        grid-area: card-5;
+        width: 328px;
+        height: 247px;
+
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(5) {
+        grid-area: card-5;
+        width: 343px;
+        height: 216px;
+    }
+}
+
+.card:nth-child(6) {
+    grid-area: card-6;
+    width: 256px;
+    height: 434px;
+    gap: 24px;
+    padding: 24px;
+    & p {
+        width: 208px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .card:nth-child(6) {
+        grid-area: card-6;
+        width: 328px;
+        height: 354px;
+        padding: 24px;
+        justify-content: start;
+        align-items: start;
+
+        & p {
+            width: 280px;
+            font-weight: 500;
+        }
+        & img {
+            width: 219px!important;
+            height: 222px!important;
+        }
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(6) {
+        grid-area: card-6;
+        width: 343px;
+        height: 350px;
+    }
+}
+
+.card:nth-child(7) {
+    grid-area: card-7;
+    width: 256px;
+    height: 246px;
+    gap: 24px;
+}
+
+@media screen and (max-width: 769px) {
+    .card:nth-child(7) {
+        grid-area: card-7;
+        width: 688px;
+        height: 131px;
+        flex-direction: row;
+        justify-content: space-between;
+        & img {
+            width: 178px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(7) {
+        grid-area: card-7;
+        width: 343px;
+        height: 215px;
+        flex-direction: column;
+    }
+}
+
+.card:nth-child(8) {
+    grid-area: card-8;
+    height: 245px;
+}
+
+
+@media screen and (max-width: 378px) {
+    .card:nth-child(8) {
+        grid-area: card-8;
+        width: 343px;
+        height: 372px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap:40px;
+
+        & div {
+            width: 257px;
+        }
+    }
+}
+
+@media screen and (max-width: 378px) {
+    body {
+        display:block;
+        margin:0;
+    }
+}
+/* FLEXBOX */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items:center;
+}
